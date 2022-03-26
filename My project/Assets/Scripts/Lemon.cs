@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Lemon : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -15,4 +14,6 @@ public class Lemon : MonoBehaviour
     {
         transform.Rotate(new Vector3 (15, 30, 45) * Time.deltaTime);
     }
+
+    
 }
