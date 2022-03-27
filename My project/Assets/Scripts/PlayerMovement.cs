@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 20f;
-    private int score;
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
@@ -18,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
         m_Animator = GetComponent<Animator> ();
         m_Rigidbody = GetComponent<Rigidbody> ();
         m_AudioSource = GetComponent<AudioSource> ();
-        score = 0;
     }
 
     void FixedUpdate ()
@@ -61,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.CompareTag("Lemon"))
         {
             other.gameObject.SetActive (false);
-            score = score +5;
+            ScoreManager.instance.AddPoint();
         }
     }
 
